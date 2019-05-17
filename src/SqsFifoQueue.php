@@ -2,6 +2,7 @@
 
 namespace ShiftOneLabs\LaravelSqsFifoQueue;
 
+use Illuminate\Notifications\SendQueuedNotifications;
 use LogicException;
 use Aws\Sqs\SqsClient;
 use BadMethodCallException;
