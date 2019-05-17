@@ -224,6 +224,10 @@ class SqsFifoQueue extends SqsQueue
             return [];
         }
 
+        if($job instanceof SendQueuedNotifications) {
+            $job = $job->notification;
+        }
+
         return array_filter(
             [
                 'group' => isset($job->messageGroupId) ? $job->messageGroupId : null,
